@@ -1,5 +1,5 @@
-import Storage from './modules/storage.js'
 import { DateTime } from './node_modules/luxon/src/luxon.js'
+import Storage from './modules/storage.js'
 
 const BookData = document.querySelector('#books')
 const button = document.querySelector('#add-button')

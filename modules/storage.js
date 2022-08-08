@@ -3,12 +3,12 @@ export default class Storage {
     this.Books = []
   }
 
-  static addBook (newBook) {
+  static addBook = (newBook) => {
     this.Books.push(newBook)
     localStorage.setItem('Books', JSON.stringify(this.Books))
   }
 
-  static removeFromBooks (target) {
+  static removeFromBooks = (target) => {
     const removeBook = target.previousElementSibling.firstElementChild.textContent
 
     this.Books.filter((book, index) => {
@@ -20,7 +20,7 @@ export default class Storage {
     localStorage.setItem('Books', JSON.stringify(this.Books))
   }
 
-  static getBooksFromStorage () {
+  static getBooksFromStorage = () => {
     if (localStorage.getItem('Books') === null) {
       this.Books = []
     } else {
